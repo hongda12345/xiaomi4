@@ -1,0 +1,107 @@
+/*
+* @Author: 宏达
+* @Date:   2017-08-17 16:01:52
+* @Last Modified by:   宏达
+* @Last Modified time: 2017-08-21 17:52:58
+*/
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-family: "微软雅黑","宋体",sans-serif;
+}
+a{
+	text-decoration: none;
+}
+body{
+	background: #fff;
+}
+
+
+
+
+伪类选择器：结构伪类选择器
+child注重位置的排序
+:first-child 选中第一个子元素
+:nth-child(2) 选中第二个子元素:括号里面可以是表达式（2n：选中偶数）、（2n+1：选中奇数）、（0dd 选中奇数）（even 选中偶数）
+:nth-last-child（） 选中倒数第几个子元素
+:last-child 选中最后一个子元素
+
+type更加注重类型的排序
+忽视其他类型，视其它标签类型而不见，只能选中这种类型的
+:first-of-type     这种类型的第一个 
+:last-of-type      这种类型的最后一个
+:nth-of-type(2);   这种类型的第二个
+
+属性选择器：
+E[attr]:匹配E元素，且有attr属性
+div[class]  img[title]
+
+E[attr="box"]:匹配E元素，并且有attr属性，属性值是box
+div[class="box"]
+
+E[attr|="box"]:匹配E元素，并且有attr属性，属性值中有连字符，并且以box单词开头（它本身）;
+div[class|="box"]
+
+E[attr~="box"]:匹配E元素，并且有attr属性，属性值中有空格，并且包含box单词（它本身）;
+div[class~="box"]
+
+E[attr*="box"]:匹配E元素，并且有attr属性，属性值中包含box字母（它本身）;
+div[class*="box"]
+
+E[attr^="box"]:匹配E元素，并且有attr属性，属性值中以box字母开头（它本身）;
+div[class^="box"]
+
+E[attr$="box"]:匹配E元素，并且有attr属性，属性值中以box字母结尾（它本身）;
+div[class$="box"]
+
+
+子代选择器：
+div>p:直系父级为div的p元素
+同级元素：
+div+p:div后面紧跟着的p元素  兄弟元素
+div~p:所有紧跟在div后面所有的p标签
+
+
+
+定位：position
+相对定位:参考元素本身的位置;
+position:relative;
+通过top bottom left right 进行调整
+
+绝对定位：
+父子关系  
+父元素：position:relative
+子元素：position：absolute;
+        通过 top bottom left right 进行调整
+水平居中、垂直居中
+问题：
+1、父元素有定位属性即可；
+2、如果父元素没有定位属性则相对整个文档进行定位。
+
+固定定位：相对于窗口定位
+position：fixed;
+通过 top bottom left right 进行调整
+层级：z-index:999;
+
+
+表单标签：      jsp asp
+<form action="a.php" method="post">
+form:表单标签
+action:数据提交的位置
+method:数据提交的方式
+get:数据量少 不安全
+post:数据量多 安全
+
+控件
+输入框：
+行内块标签：
+placeholder:提示文本
+name:和数据库交换信息
+size:设置控件的宽度
+maxlength:最大输入的字符数
+readonly:只读
+disabled:禁用
+value:获取用户的输入内容
+
+/* 
